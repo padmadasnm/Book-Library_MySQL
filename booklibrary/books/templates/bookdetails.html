@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{%extends 'base.html'%}
+{%block body_block%}
+
+<div class="container">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4 mt-5">
+
+            <div class="card" style="width: 22rem;">
+                <div class="card-header">
+                    {{book.book_name}}
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">{{book.author}}</li>
+                    <li class="list-group-item">{{book.category}}</li>
+                    <li class="list-group-item">{{book.review}}</li>
+                    <li class="list-group-item">{{book.copies}}</li>
+
+                </ul>
+            </div>
+            <a href="{%url 'listbooks'%}" class="btn btn-outline-info mt-3">Back</a>
+
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
+
+{%endblock%}

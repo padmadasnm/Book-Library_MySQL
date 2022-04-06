@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{%extends 'base.html'%}
+{%block body_block%}
+
+<div class="container">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4 mt-5">
+            <h1 class="text-center">Add Book</h1>
+            <form action="" method="POST">
+                {%csrf_token%}
+                {{form.as_p}}
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary" type="submit">Save</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
+
+{%endblock%}
